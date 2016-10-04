@@ -1,0 +1,167 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\info
+{\author Andy Freeman}
+{\*\company Department of Computing}
+{\*\copyright Andy Freeman}}\paperw11900\paperh16840\margl1440\margr1440\vieww11980\viewh7020\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs36 \cf0 Exercises Week 16 - UIKit one pager
+\fs28 \
+\
+Download the {\field{\*\fldinst{HYPERLINK "http://igor.gold.ac.uk/~mas01af/sandbox2015/week16_code.zip"}}{\fldrslt code samples}} for todays exercises.
+\b0 \
+\
+1. Start with the page 
+\i uikit_one_pager_start.html
+\i0 . Lets loosen up our coding muscles by trying some basic copy and pasting to build out some content on this page. Replace the content with some of your own and do some copy/pasting to produce a page with 2-3 sections and 2-3 images. Have a look at some the core styles and try to use some of them (try breaking a paragraph into columns for example). Include a block quote or two and some subheadings to break the piece into 2-3 sections (this is so we can hook these up to a menu bar in the next sequence of exercises).  
+\i From this point on you can either use your own content page by copying and pasting the code from the code samples into your own template of you can use my starting points.
+\i0  \
+\
+2. Open the 
+\i uikit_one_pager_navbar_start.html
+\i0  (or copy the NAV element into your own layout), modify the code so that the menu\'92s jump to the correct sections in your page. Try adding a \'91brand\'92 to the navbar using \'91uk-navbar-brand\'92 ({\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=AY1_hiboFg0"}}{\fldrslt help}})\
+\
+Fix the navigation so it jumps to the correct sections of the page by adding an css ID to the first element in each section (usually a H tag) and then put that same name into the href attribute for the relevant menu item preceded by a #. This is how to make a hyperlink to another section in the same page. Note the URL has #<id> appended to the end after you have clicked on a link that uses this technique, this means that more generally you can link a URL to a specific place on page, not just the top of the page. If you just a single # by itself with no css id in a href this will always take you to the top of the page. If you get stuck check the finished version of this page in the code samples.\
+\
+3. Now we want to make our menu stick to the top of the page as we scroll down. For this we use the sticky component. Note that with UIKit we get a set of features referred to as the \'91core\'92 that we will use on every page but some features are optional and grouped together as \'91components\'92, to use these we need to add a couple of extra lines of code in the header to load the specific component into the page, one for the CSS and one for the javascript. \
+\
+Open the file 
+\i uikit_one_pager_sticky_navbar_start.html
+\i0  and add the following two lines to the head section just after you have added the main CSS and Javascript for UIKit respectively. \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs24 \cf0 <link type="text/css" rel="stylesheet" href="js/uikit-2.24.0/css/components/sticky.almost-flat.min.css" />\
+<script type="text/javascript" src="js/uikit-2.24.0/js/components/sticky.min.js"></script>
+\f0\fs28 \
+\
+Now add the following 
+\i attribute
+\i0  to the NAV tag and test your work.\
+\
+
+\f1\fs24 data-uk-sticky=""
+\f0\fs28 \
+\
+Using a data-* attribute allows us to send configuration information commands to the javascript based components in UIKit such as the sticky component. The configuration commands are sent as small JSON objects we add as value to the attribute. Modify the  attribute above to read\
+\
+
+\f1\fs24 data-uk-sticky="\{clsactive: 'uk-navbar-attached'\}"
+\f0\fs28 \
+\
+This command makes the round corners and border go away from the navbar when its stuck to the top of the page. We also tell the navbar not to appear until we have scrolled a certain amount down the page and we can also add an animation to it as it appears. Add the following two key/value pairs to the JSON configuration object you just added and test your work.\
+\
+
+\f1 top: -100, animation: 'uk-animation-slide-top'
+\f0 \
+\
+(UIKit {\field{\*\fldinst{HYPERLINK "(help%20for%20this%20exercise)"}}{\fldrslt video}} for this exercise, the only difference in my code is that I have placed the navbar outside of the central container so it goes full width)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\i\b \cf0 Other useful options : 
+\b0 On a mobile screen you might not want to navbar to stick and take up too space all the time and just let it scroll off the screen normally. The component has options for controlling this using the {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/sticky.html#responsive-behavior"}}{\fldrslt media and orientation}} configuration options. You can also use this component in more creative ways that just a navbar, as the behaviour can be embedded inside other elements so that for example, section titles can be made to slide down over section background images and then scroll off the page with the parent element by using {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/sticky.html#sticky-boundary"}}{\fldrslt sticky boundaries}}.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\i0 \cf0 \
+4. The finished page from the last step (
+\i uikit_one_pager_sticky_navbar_finish.html
+\i0 ) has a FOOTER element in it that has a link that takes you back to the top of the page (if you have been developing your own page then just copy and paste the FOOTER element from the finished page in the code samples into your own code). When we click on this element we notice that the page jumps back to the top of the page instantly, we can improve upon this by making the page scroll visibly back to the beginning this technique is called smooth scrolling and is useful as it gives more feedback to the user about the length and type of content of the piece if the choose to skim your page before reading more. To make this happen we need to add the following attribute to the anchor tag in the footer element and test your work\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f1\fs24 \cf0 data-uk-smooth-scroll=""
+\f0\fs28 \
+\
+Now we want to get the menus to do the same. We could add the same attribute to each of the links but UIKit has a behaviour just for this purpose. Add the following attribute to the UL tag inside your NAV element and test your work.\
+\
+
+\f1\fs24 data-uk-scrollspy-nav="\{closest: 'li', smoothscroll: true\}"
+\f0\fs28 \
+\
+Note that now when you click on the menu items it scrolls smoothly, also try manually scrolling down the page, you will see that the menu bar highlights the section you are in, this is a lot of functionality for not a lot of code! But there is still a problem with our UX (User eXperience!) in that when we scroll down to a section the menu bar covers the title of the section. We can fix this by passing a configuration parameter to the smooth scroll component, change the line you just added to the one below and then test your work.\
+\
+
+\f1\fs24 data-uk-scrollspy-nav="\{closest: 'li', smoothscroll: \{offset: 50\}\}
+\f0\fs28 \
+\
+There is one feature of the default themed navbar that is a little annoying in that when we jump to a section using the navbar and then scroll into another section the both the menu item for the section we have scrolled into and the one we jumped to are both highlighted. For the default theme we need to add a bit of CSS to fix this. Add the style below below the last element inside the HEAD section.\
+\
+
+\f1\fs24 <style type="text/css">\
+        .uk-navbar-nav > li:not(.uk-active) > a:active,\
+        .uk-navbar-nav > li:not(.uk-active) > a:focus \{\
+            background-color: inherit;\
+            border-left-color: rgba(0,0,0,0);\
+            border-right-color: rgba(0,0,0,0);\
+        \}\
+ </style>
+\f0\fs28 \
+\
+Other UIKit themes may not have this issue, if they do then this code should work with them as well. \
+\
+If you get stuck then final version of this file is in the code samples folder. ({\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?time_continue=521&v=t8Te3T8Y6EQ"}}{\fldrslt video }}help for this section)\
+\
+5. Open the file 
+\i uikit_one_pager_mobile_start.html
+\i0  and test it in a web browser. Try narrowing the screen to mobile widths, notice how the menu wraps around. We don\'92t like this, we would much rather have a hamburger menu icon like on a proper mobile site that open a menu from the side of the screen. (NB: for those who have been doing their own content this file is no different from the one in the previous step but just has more sections with longer menu items). First add this line to your your NAV element after the UL tag.\
+\
+
+\f1 <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
+\f0 \
+\
+Now add this code after the FOOTER element at the bottom of the page and test your work.\
+\
+
+\f1 <div id="offcanvas" class="uk-offcanvas">\
+        <div class="uk-offcanvas-bar">\
+            <li><a href="#biscuits">Proper Biscuits</a></li>\
+            <li><a href="#cake">Real Cake</a></li>\
+            <li><a href="#crisps">Cracking Crisps</a></li>\
+        </div>\
+ </div>
+\f0 \
+\
+Clicking on the hamburger icon now opens a working mobile style navigation form the side of the screen. But when we narrow the screen to mobile widths we can still the main menus as well as the hamburger icon. Ideally we want to hide the hamburger icon when the screen is wide and then show it when the screen is narrow and at the same time hide the existing main menu. We can do this using the utility classes for showing and hiding elements depending on screen width. Have a look at the {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/utility.html#visibility-utilities"}}{\fldrslt documentation}} in the utility classes for 
+\i responsive visibility
+\i0  and see if you  figure out which classes to add to which elements. If you get stuck check the finished version or look at the UIKit {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?time_continue=268&v=MfdMfobt3l4"}}{\fldrslt video}} for this feature.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b \cf0 Harder Exercises (solutions in code samples)
+\b0 \
+\
+6. Add a large image (1400px or larger) above the navbar and set its width to 100%. The try to use the features of the {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/overlay.html"}}{\fldrslt overlay}} classes, the utility {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/utility.html#heading-large"}}{\fldrslt heading}} classes and the {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/icon.html"}}{\fldrslt icon}} classes to add a title over the image and a down icon that takes you to the start of the article.\
+\
+7. Use the {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/scrollspy.html"}}{\fldrslt scrollspy}} component to slide your pull up quotes into the page from the right hand side as they scroll into view \
+\
+8. Figure out how to size the images that are embedded in the text to use a UIKit grid width (uk-width-1-3) instead of a fixed pixel width. The add figure captions to your images using the {\field{\*\fldinst{HYPERLINK "http://www.w3schools.com/tags/tag_figcaption.asp"}}{\fldrslt figcaption}} tag. Use the UIKit {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/text.html"}}{\fldrslt text}} classes to set the size and alignment of the captions.\
+\
+\
+
+\b References/Tutorials
+\b0 \
+\
+Note: UIkit is a better way of making HTML pages and as such all of the teaching material will assume that already know about the basic HTML tags and also what a CSS class is used for. If you aren\'92t keen on learning that much HTML/CSS then you can always use a WordPress template to present your final projects. You can even use a bit of both as there are plugins for WordPress that allow you to use UIKit tricks inside any WordPress template that was built using UIKit (there are now many WordPress templates that are now built using UIKit)\
+\
+
+\i Introductory tutorial on UIkit\
+
+\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://www.sitepoint.com/building-responsive-portfolio-uikit/"}}{\fldrslt \cf0 http://www.sitepoint.com/building-responsive-portfolio-uikit/}}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\i \cf0 Interesting jQuery plugin that can use UiKit components to build richly featured tables that fit perfectly with your UIkit theme (not reviewed)\
+
+\i0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+{\field{\*\fldinst{HYPERLINK "https://datatables.net/examples/styling/uikit.html"}}{\fldrslt \cf0 https://datatables.net/examples/styling/uikit.html}}\
+\
+\
+\
+\
+}

@@ -1,0 +1,123 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red210\green0\blue68;\red249\green249\blue249;}
+{\info
+{\author Andy Freeman}
+{\*\company Department of Computing}
+{\*\copyright Andy Freeman}}\paperw11900\paperh16840\margl1440\margr1440\vieww12600\viewh10200\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs32 \cf0 Week 17 Exercises - More UIKit
+\b0\fs28 \
+\
+These exercises continue from last week and the starting point is exercise 8 solution from last week. Each question has a solution file in the {\field{\*\fldinst{HYPERLINK "http://igor.gold.ac.uk/~mas01af/sandbox2015/code_week17.zip"}}{\fldrslt code folder}} for this week.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b \cf0 Exercise 9 Full width section headers
+\b0 \
+\
+At the moment we have a one page feature with a full width image with overlaid title at the top of the page. In our onetone template that we used earlier in the course we could have section titles that were overlaid with the title of the section. \
+\
+Take exercise 8 from last week, break the main container div into two sections and paste a copy of the figure HTML from the header into the gap in between the two sections of the main container, adjust the code in the figure to point to the new image and change the text in the title. Copy the id from the old header into the figure tag and then remove the old header. Check your work.\
+\
+
+\b Exercise 10  Adding a lightbox to our smaller images
+\b0 \
+\
+There are two images that are presented inline in our body text, one pushed left and the other pushed right with the text flowing around them. It would be nice to allow readers to see a higher resolution version of those image when they click on them.\
+\
+We can use the UIKit {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/lightbox.html"}}{\fldrslt lightbox component}} to do this, first include the components javascript file into your HEAD.\
+\
+<script type="text/javascript" src="js/uikit-2.24.0/js/components/lightbox.min.js"></script>\
+\
+The add an anchor (A) around each image with the src for the image set as the href of the anchor, you can also add the title to be shown with the image.\
+\
+
+\b Exercise 11 A background header video from Youtube
+\b0 \
+\
+This technique allows us to embed any iframe in our presentation and have it either full width at a fixed height (like for a section header) or we can have cover the entire browser window (like for a header background video). First comment out the current FIGURE we are using as our header and then place this code above it\
+\
+    <div class="uk-cover" style="height:300px;">\
+        <iframe data-uk-cover width="560" height="315" src="https://www.youtube.com/embed/U-mkemUrGu4?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1" frameborder="0" volume="0" allowfullscreen></iframe>\
+    </div>\
+\
+This should give you a full width video that is 300 pixels high and auto plays with no sound. To make it fill the browser window we need to remove the style from the container div and add the class 
+\f1\fs24 \cf2 \cb3 .uk-height-viewport 
+\f0\fs28 \cf0 \cb1 (part of the {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/cover.html"}}{\fldrslt Cover}} classes in the core) to our existing class attribute. Change the container div opening tag to this:\
+\
+   <div class="uk-cover uk-height-viewport">\
+\
+Now you should see the video fill the browser window. Now we just need to get our title, strap line and chevron back again. Copy the FIGCAPTION from the old commented out header section and place this in our container div under the iframe and test your work. If you get stuck look at the completed code.\
+\
+
+\b Exercise 12 Video plays on scroll entry
+\b0 \
+\
+Lets put a smaller video into our layout that starts to play when the user scrolls into that section. Put this fragment in between a couple of your paragraphs.\
+\
+<iframe  width="560" height="315" src="https://www.youtube.com/embed/g4lnRu4gIiU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>\
+\
+This should give you a video that fills the column but overspills it when narrow the screen, we can fix this by adding the following class\
+\
+class="uk-responsive-width"\
+\
+You should now see it resize right down to mobile portrait mode.\
+\
+To get it to play automatically as the video sculls into view we need to use some custom javascript, the reason for this is that the scroll spy component we looked at last week to animate out quotes onto the screen can only change CSS properties and the play state of an iframe embedded video is a JavaScrip property. Add the following script below the video element.\
+\
+        <script type="text/javascript">\
+            $('#video_one').on('inview.uk.scrollspy', function(ev)\{\
+                $("#video_one")[0].src += "&autoplay=1";\
+                ev.preventDefault();\
+            \});\
+        </script>\
+\
+This jQuery script does two things, firstly add a listener to the video_one element on the page using the on() jQuery function. That listener listens for the \'91inview.uk.scrollspy\'92 event that is generated by UIKit for you when an element scrolls into view. Secondly once the listen hears the event it re-wrtites the source tag for the video to put it into auto play mode and hence the video starts playing.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\i \cf0 NOTE: it looks like the {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/scrollspy.html#javascript-options"}}{\fldrslt outview event }}isn\'92t being sent in the current version of UIKit, this is a problem for our video player which makes me sad. It might be a bug in this release I will let you know when I find out.
+\i0 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b \cf0 Exercise 13 Adding Parallax
+\b0 \
+\
+We want our overlaid title in the header to fade and move slightly as we scroll down into the main text. To do this we can use the {\field{\*\fldinst{HYPERLINK "http://getuikit.com/docs/parallax.html"}}{\fldrslt parallax component}} to do this, first include the component in your head section after the others\
+\
+    <script type="text/javascript" src="js/uikit-2.24.0/js/components/parallax.min.js"></script>\
+\
+Now add the component to the div that contains our headings inside the figcaption.\
+\
+    <div data-uk-parallax="\{opacity:0, viewport:0.8, y:100\}">\
+\
+Test your work, you should see the title fade and move gradually as we scroll down the page. Try changing the three values in the JSON object to get a feeling for how quickly you can make the title move and fade.\
+\
+Using the same technique now try to add parallax to the full width image section we added in exercise 9.  \
+\
+
+\b Exercise 14 Using a Google Font
+\b0 \
+\
+The customiser allows us to tweak a theme and see the results in the browser straight away. This is useful for changing colours and spacings, but most of the settings are aimed at people designing web apps with lots of buttons and forms. The one thing we are most likely to need for multimedia sites though is Google fonts (or a downloadable web font). To add a Google font we have to modify the CSS files for the theme we are using manually. In the case of the exercises we have been doing we decide to use the \'91almost flat\'92 theme. If you look at where the CSS is linked for this in the HEAD section we can see that it\'92s been linked to the \'91min\'92 version of the file. This means the CSS code has had all the spaces taken out of it which makes it unreadable (but slightly faster to load). To modify our CSS we need to link to the unmagnified version of the CSS which is in the same directory as the minified version but doesn\'92t have \'91min\'92 in the file name. Change your link to the CSS file to this one:\
+\
+ <link type="text/css" rel="stylesheet" href="js/uikit-2.24.0/css/uikit.almost-flat.css" />\
+\
+Now open \'91uikit.almost-flat.css\'92 and add the following line to the top of the file.\
+\
+ @import url(https://fonts.googleapis.com/css?family=EB+Garamond);\
+\
+Then in the CSS properties for the HTML selector change the font property to this:\
+\
+ font: normal 16px / 22px \'91EB \'91Garamond, sans-serif;\
+\
+Now test your work, you should see the EB Garamond font being loaded for the body font instead of Helvetica (the two px sizes are the font and line height). Now go to Google Fonts and choose a different font for the headings and see if you can use that instead. You will need to use another import statement at the top of the file and then find the selector for the H elements and set the property.\
+\
+\
+\
+\
+\
+}

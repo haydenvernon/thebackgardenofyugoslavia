@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The back garden of Yugoslavia</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+<link type="text/css" rel="stylesheet" href="js/uikit-2.26.2/css/components/sticky.almost-flat.min.css" />
+
+<link type="text/css" rel="stylesheet" href="js/uikit-2.26.2/css/uikit.css" /> 
+
+<link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Rajdhani:400,700' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<script type="text/javascript" src="js/uikit-2.26.2/js/uikit.min.js"></script>
+
+<script type="text/javascript" src="js/uikit-2.26.2/js/components/sticky.min.js"></script>
+
+<script type="text/javascript" src="js/uikit-2.26.2/js/components/lightbox.min.js"></script>
+
+<script type="text/javascript" src="js/uikit-2.26.2/js/components/parallax.min.js"></script>
+
+<script type="text/javascript" src="js/uikit-2.26.2/js/components/slideshow.js"></script>
+
+<script type="text/javascript" src="js/uikit-2.26.2/js/components/slideshow-fx.min.js"></script>
+
+<script type="text/javascript" src="js/uikit-2.26.2/js/components/slider.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="parallax.js/parallax.js"></script>
+
+<script>
+var timer;
+$(window).bind('resize', function() {
+clearTimeout(timer);
+timer = setTimeout(function(){ $(window).resize(); }, 250);
+});	
+
+</script>
+
+<script> 
+var $buoop = {c:2}; 
+function $buo_f(){ 
+ var e = document.createElement("script"); 
+ e.src = "//browser-update.org/update.min.js"; 
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script> 
+  
+
+<!-- progress bar -->
+<script>
+
+$(document).ready(function() {
+  var documentHeight = $(document).height(),
+      windowHeight = $(window).height(),
+      scrollPercent;
+
+  $(window).scroll(function() {
+    scrollPercent = ($(window).scrollTop()) / (documentHeight - windowHeight) * 100;
+
+    $(".progress-bar").width(scrollPercent + "%");
+  });
+});
+
+</script>
+
+<script src="js/index.js"></script>
+
+<!-- CSS --> 
+<style>
+
+body: {padding-top: 0px; 
+}
+
+.uk-navbar .uk-navbar-nav {
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.uk-navbar .uk-navbar-nav > li > a {
+	font-size: 15px;
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+
+}
+
+.uk-navbar .uk-navbar-nav > li > p {
+	font-size: 15px;
+  color: white;
+  padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+ .progress-bar {
+    width: 0%;
+    height: 5px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+
+  padding-top: 100px;
+}
+.header1 {
+  font-size: 70px;
+  word-spacing: -15px;
+  letter-spacing: 4px;
+  line-height: .7;
+}
+
+.header2 {
+  font-style: bold;
+  font-size: 92px;
+  word-spacing: -8px;
+  line-height: .7;
+}
+
+.header3 {
+
+  line-height: .5;
+}
+
+.header4 {
+  font-size: 40px;
+  line-height: .8;
+}
+
+.header5 {
+  font-size: 60px;
+  line-height: .8;
+  word-spacing: -6px;
+}
+
+.header6 {
+  line-height: .4;
+}
+
+.headertouch1 {
+  line-height: .4;
+  word-spacing: 15px;
+}
+
+.headertouch2 {
+  line-height: .4;
+  word-spacing: -5px;
+}
+
+.headertouch3 {
+  line-height: .01;
+}
+
+.titlesmall { 
+    font-family: 'Libre Baskerville', serif;
+    line-height: .5;
+    margin-bottom: 5px;
+}
+
+.parallax-window {
+    min-height: 600px;
+    background: transparent;
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    line-height: .1;
+    letter-spacing: 4px;
+    word-spacing: -15;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.parallax-window > h3 {
+    background: transparent;
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    line-height: .5;
+}
+
+.section1small {
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  color: black;
+  padding-top: 80px;
+  margin-bottom: 40px;
+
+
+}
+
+.dropcap {
+    float: left;
+    font-size: 100px;
+    margin-top: 18px;
+    margin-bottom: 30px;
+    margin-right: 7px;
+    line-height: 0.5;
+
+}
+
+.pquote { 
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+
+}
+
+
+.figcaption {
+
+	font-family: 'Helvetica', sans-serif;
+	font-style: italic;
+	padding-top: 5px;
+  margin-left: 5px;
+  margin-right: 20px;
+
+}
+
+.footer {
+
+  text-align: center;
+  padding-top: 500px
+  padding-bottom: 50px;
+  background-color: #202020;
+  color: white;
+
+}
+
+.footer > p {
+
+color: white;
+	
+}
+
+.footer > h3 {
+
+color: white;
+	
+}
+
+
+.footer > p > a {
+
+color: white;
+	
+}
+
+h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 60px;
+  line-height: 1;
+}
+
+h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 46px;
+  line-height: 1;
+}
+
+h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  text-align: center;
+}
+
+h4 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+}
+
+h5 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  line-height: 1;
+}
+
+h6 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 10px;
+  line-height: 1;
+}
+
+p {
+font-family: 'Helvetica', sans-serif;
+font-size: 18px;
+
+}
+
+hr { 
+	margin-left: auto;
+    margin-right: auto;
+	width:30%; 
+	height:.7px; 
+	background: #fff 
+
+}	
+
+a:link {
+    color: gray; 
+    font-style: bold;
+}
+
+/* visited link */
+a:visited {
+    color: gray; 
+  }
+
+/* mouse over link */
+a:hover {
+    color: gray;
+}
+
+/* selected link */
+a.class1:active {
+    color: gray;
+}
+
+a.class1:link {
+    color: white; 
+}
+
+/* visited link */
+a.class1:visited {
+    color: white; 
+  }
+
+/* mouse over link */
+a.class1:hover {
+    color: gray;
+}
+
+/* selected link */
+a.class1:active {
+    color: gray;
+}
+
+
+</style>
+
+</head>
+
+<body>
+            
+<!-- HEADER TOUCH -->
+
+<div class="uk-overlay uk-hidden-notouch" style="background-color: black;">
+  <img src="img/Trepca.png" style="">
+    <figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-top uk-text-center" style="margin-top: 1%;">
+      <div style="margin-top: 12%;">
+        <h3 class="headertouch1">THE</h3> 
+        <h2 class="headertouch2"> BACK GARDEN</h2>
+        <h3 class="headertouch1">OF</h3> 
+        <h2 class="headertouch1">YUGOSLAVIA</h2>
+      <div class="uk-align-center" style="margin-top: 10%; margin-left: 2%; margin-right: 2%;"> 
+        <h4 style="margin: 2%;"><i>Twenty years since its mines closed, Mitrovica is yet to recover</i></h4>
+      </div> 
+       <h5 style="margin-top: -5%; padding-top: 5%;"><hr />by HAYDEN VERNON</h5> 
+      </div> 
+    </figcaption>
+</div>
+<!-- HEADER NO TOUCH-->
+
+<div class="uk-cover uk-position-relative uk-hidden-touch uk-height-viewport" style="background-color: black;">   
+    <img class="uk-invisible" src="" width="" height="" alt="">
+      <video class="uk-cover-object uk-position-absolute" style="width: 1280px; height: 720px; "  autoplay="" loop="" > <source src="vid/Monument.mp4" type="video/mp4"> <source src="video-background.webm" type="video/webm"> 
+      </video> 
+</div> 
+
+<figcaption class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-hidden-touch">
+
+<!--LARGE -->
+    <div class="header uk-visible-large" style="padding-bottom: 10%;">
+      <h1 class="header1">THE</h1>
+      <h1 class="header2">BACK GARDEN</h1> 
+      <h1 class="header1">OF</h1>
+      <h1 class="header2">YUGOSLAVIA</h1>
+      <div class="uk-align-center" style="margin-left: 20%; margin-right: 20%;"> 
+        <h3 style="margin: 2%;">Once the most prosperous city in the Balkans. Twenty years since its mines closed, Mitrovica is yet to recover</h3>
+         
+      </div> 
+      <h5>by HAYDEN VERNON</h5>
+      <h5 style="margin-top: -1%;"><a href="https://twitter.com/haydenvernon" target="_blank" style=""> <i class="uk-icon-justify uk-icon-twitter-square"></i></a>
+      <a href="https://www.instagram.com/haydenvernon/" target="_blank" style=""> <i class="uk-icon-justify uk-icon-instagram"></i></a>
+      <a href="https://www.facebook.com/hayden.j.vernon" target="_blank" style=""> <i class="uk-icon-facebook-square"></i></a></h5>
+      <h1 style="" data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 0}}"><a href="#Section1"><i class="uk-icon-chevron-circle-down"></i></a></h1>
+    </div>
+
+<!-- MEDIUM --> 
+    <div class="header uk-visible-medium" style="padding-bottom: 10%;">
+
+      <h1 class="header1">THE</h1>
+      <h1 class="header2">BACK GARDEN</h1> 
+      <h1 class="header1">OF</h1>
+      <h1 class="header2">YUGOSLAVIA</h1> 
+      <div class="uk-align-center" style="margin-left: 20%; margin-right: 20%;"> 
+        <h3 style="margin: 2%;">Once the most prosperous city in the Balkans. Twenty years since its mines closed, Mitrovica is yet to recover</h3>
+         <h1 style="" data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 0}}"><a href="#Section1"><i class="uk-icon-chevron-circle-down"></i></a></h1>
+      </div> 
+      <h5>by HAYDEN VERNON</h5>
+      <h5 style="margin-top: -1%;"><a href="https://twitter.com/haydenvernon" target="_blank" style=""> <i class="uk-icon-justify uk-icon-twitter-square"></i></a>
+      <a href="https://www.instagram.com/haydenvernon/" target="_blank" style=""> <i class="uk-icon-justify uk-icon-instagram"></i></a>
+      <a href="https://www.facebook.com/hayden.j.vernon" target="_blank" style=""> <i class="uk-icon-facebook-square"></i></a></h5>
+     
+    </div>
+
+<!-- SMALL --> 
+    <div class="header uk-visible-small" style="padding-bottom: 10%;">
+
+      <h2 class="header4">THE</h2>
+      <h2 class="header5">BACK GARDEN</h2> 
+      <h2 class="header4">OF</h2>
+      <h2 class="header5">YUGOSLAVIA</h2> 
+      <div class="uk-align-center" style="margin-left: 20%; margin-right: 20%;"> 
+        <h4 style="margin: 2%;">Once the most prosperous city in the Balkans. Twenty years since its mines closed, Mitrovica is yet to recover</h4>
+         <h1 style="" data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 0}}"><a href="#Section1"><i class="uk-icon-chevron-circle-down"></i></a></h1>
+      </div> 
+      <h5>by HAYDEN VERNON</h5>
+      <h5 style="margin-top: -1%;"><a href="https://twitter.com/haydenvernon" target="_blank" style=""> <i class="uk-icon-justify uk-icon-twitter-square"></i></a>
+      <a href="https://www.instagram.com/haydenvernon/" target="_blank" style=""> <i class="uk-icon-justify uk-icon-instagram"></i></a>
+      <a href="https://www.facebook.com/hayden.j.vernon" target="_blank" style=""> <i class="uk-icon-facebook-square"></i></a></h5>
+
+    </div>
+</figcaption>
+
+<!--navbar --> 
+<nav style="z-index: 2;" id="navbar1" class="uk-navbar" data-uk-sticky="{clsactive: 'uk-navbar-attached'}" class="uk-navbar">
+
+<!-- progress bar -->
+<div class="progress-bar"></div> 
+
+    <ul data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 0}}" class="uk-navbar-nav">
+      <li><p style="margin-left: 20px; font-family: 'Rajdhani', sans-serif;"><i class="uk-icon-cube" style="padding-right: 5px;"></i> The back garden of  Yugoslavia</p>
+      </li> 
+    </ul> 
+
+    <div class="uk-navbar-flip">
+        
+      <ul data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 0}}" class="uk-navbar-nav uk-hidden-small">
+        <li><p style="font-family: 'Rajdhani', sans-serif;">Chapters: </p></li>
+        <li><a href="#Section1">1 </a></li>
+        <li><a href="#Section2">2 </a></li>
+        <li><a href="#Section3">3 </a></li>
+        <li><p><a href="https://twitter.com/haydenvernon" target="_blank" style="color: white; margin-left: 10px;"> <i class="uk-icon-justify uk-icon-twitter-square"></i></a></p></li> 
+        <li><p><a href="https://www.instagram.com/haydenvernon/" target="_blank" style="color: white; margin-left: 10px; margin-right: 10px;"> <i class="uk-icon-justify uk-icon-instagram"></i></a></p></li>
+        <li><p><a href="https://www.facebook.com/hayden.j.vernon" target="_blank" style="color: white; margin-right: 20px;"> <i class="uk-icon-facebook-square"></i></a></p></li>
+
+      </ul>
+
+      <!--TOGGLE SMALL -->
+      <ul data-uk-scrollspy-nav="{closest: 'li', smoothscroll: {offset: 0}}" class="uk-navbar-nav uk-visible-small">
+
+      <li class="uk-parent" data-uk-dropdown="{pos:'right-bottom', mode:'click'}" aria-haspopup="true" aria-expanded="true"><a class="uk-navbar-toggle"></a>
+        <div class="uk-dropdown uk-dropdown-navbar" style="margin: 10%;">
+            <div style="margin-right: 10%;">
+              <ul class="uk-nav uk-nav-navbar">
+                <li><a href="#Section1"><h4>Chapter 1 </h4></a></li>
+                <li><a href="#Section2"><h4>Chapter 2 </h4></a></li>
+                <li><a href="#Section3"><h4>Chapter 3 </h4></a></li>
+                <li><h4>
+                  <a href="https://twitter.com/haydenvernon" target="_blank" style="color: black; margin-left: 10px;"> <i class="uk-icon-justify uk-icon-twitter-square"></i></a>
+                  <a href="https://www.instagram.com/haydenvernon/" target="_blank" style="color: black; margin-left: 5%; margin-right: 10px;"> <i class="uk-icon-justify uk-icon-instagram"></i></a>
+                  <a href="https://www.facebook.com/hayden.j.vernon" target="_blank" style="color: black; margin-right: 20px;"> <i class="uk-icon-facebook-square"></i></a>
+                </h4></li>
+              </ul>
+            </div>
+        </div>
+      </li>
+      </ul>
+    </div>  
+</nav>
+
+    
+<!-- SECTION 1--> 
+
+<div id="Section1" class="section1small">
+  <div class="">
+  <h3 style="">Chapter 1:  <hr/></h3> 
+  <h3 style=""><i>Kosovo je Srbija</i></h3>       
+  <h3 style="">Kosovo is Serbia</h3> 
+  </div>
+</div> 
+
+<div class="uk-container uk-container-center uk-margin-top">    
+    <ul class="uk-grid" data-uk-grid-margin>
+      <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+            <p style="padding-top: 10px; indent: 0;"><b><span class="dropcap" style="font-style: bold;">&ldquo;T </span>hey say he's going to sneak in</b>, in the boot of a car,&rdquo; said my fixer, Xili, talking about Serbian politician Vojislav Seselj, who leads the far-right Serbian Radical Party [SDS].</p> 
+
+            <p>We were driving from Pristina, the capital of Kosovo, to Mitrovica, a city in the country's north. Cut in half physically by the River Ibar, Mitrovica is also divided politically and ethnically.</p> 
+
+             <p>Before war broke out in 1999 between Kosovo and Yugoslavia - comprising only Serbia and Montengro by then - Mitrovica was one of the most prosperous cities in the Balkans and the backbone of its economy was the mining industry. The Trepca lead and zinc mines are the second biggest in Europe and once provided 20,000 jobs in the area. </p>
+            
+            <div class="uk-width-small-1-1 uk-hidden-medium uk-hidden-large">
+            <hr />
+            <img src='img/mitrovicaserb.png' width="100%" class='uk-margin-top'>
+            <figcaption class="figcaption uk-hidden-medium uk-hidden-large">A Kosovo Serb in north Mitrovica flies a banner of Seselj</figcaption> 
+            <hr />
+            </div>
+
+            <p>But conflict divided the city. The area south of the river is inhabited by a majority of ethnic Albanians, the north is home to the largest number of ethnic Serbs in Kosovo. It has been semi-autonomous since Kosovo declared independence from Serbia in 2008.</p>
+
+           <p>Since the split, the mines have closed and the city's economy has atrophied.</p>
+
+            <p class="uk-hidden-notouch">This is the story of a divided city and the mine at the heart of it.</p> 
+
+            <p class="uk-hidden-touch" style="padding-bottom: 30px;">This is the story of a divided city and the mine at the heart of it.</p> 
+
+      </li>
+
+      <li class="uk-hidden-small uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin>  
+            <div data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1; padding-bottom: 10px;">
+                <img src='img/mitrovicaserb.png' width="100%" class='uk-margin-top'>
+                <figcaption class="figcaption">A Kosovo Serb in north Mitrovica flies a banner of Seselj</figcaption>
+                <hr />
+
+            </div> 
+      </li>
+	</ul>
+</div>
+
+<!-- PARALLAX PICTURE -->     
+
+<div class="parallax-window uk-hidden-touch" data-parallax="scroll" data-image-src='img/mitrovicaserbianside.jpg' >            
+</div>
+<div class="uk-hidden-notouch"> 
+<hr />
+<img src='img/mitrovicaserbianside.jpg' >           
+</div>
+<figcaption class="figcaption" style="text-align: right">Police observe a nationalist rally held by Serbs in north Mitrovica, 12 April 2016 </figcaption>
+
+<hr class="uk-hidden-notouch" />
+
+<div class="uk-container uk-container-center uk-margin-top">    
+    <ul class="uk-grid" data-uk-grid-margin>
+        <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+      			<p style="padding-top: 20px;"><b>It was mid-April,</b> and we were on our way to a political rally in the city's north side, taking place two weeks before the Serbian parliamentary election. And so, apparently, was Seselj.</p> 
+
+      			<p>Throughout the Yugoslav Wars, Seselj was at the forefront of calls for a Greater Serbia, a quasi-mythical vision uniting ethnic Serbs into a state based on Serbia's 14th century empire. The policy advocated annexing swathes of Croatia, Bosnia, Montenegro and Kosovo - implementing ethnic cleansing to do so.</p> 
+
+      			<p>His SDS played a role in helping Slobadan Milosevic to power, by scooping up right-wing votes and cooperating with him in parliament. In March this year Seselj was acquitted of war crimes including ethnic cleansing, torture and murder by the Hague.</p> 
+
+          	<p>The verdict has <a href="http://www.economist.com/news/europe/21696145-international-tribunal-creating-confusing-standards-war-crimes-and-politicians-vojislav" target="_blank"> proved controversial</a> because it ruled that he cannot be held responsible for the men who acted out his rhetoric, as they were under the control of the Yugoslavian Army. That some were also part of his own militia was not enough for the International Criminal Tribunal to convict him.</p>
+
+          	<p>Since the trial, Seselj was back on the campaign trail, and he was targeting Mitrovica's Serbs for votes. He'd be travelling in a car boot because, despite his acquittal, the Kosovo government had made it clear he was <i>persona non grata</i> and would be arrested on-sight in the country. We parked in the city centre and walked to the contested bridge that crosses the Ibar.</p>
+  
+        </li> 
+
+    <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin>
+        <div data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1;">
+          <aside class="pquote">
+           <hr />
+            &ldquo;He [Nikolic] lost the battle with Kosovo. He played his dirty game and lost it.&rdquo;
+           <hr />
+          </aside>  
+        </div> 
+    </li>
+
+    <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+
+      	<p>“I'm not going across, man,” said Xili. “You can go, I'll wait here”.</p> 
+
+      	<p>Xili had crossed over into Serbian territory a few times before, but today he said it was too risky. There was real danger of being recognised as an Albanian and assaulted.</p> 
+
+    		<p>The bridge has always been a flashpoint between the two sides, particularly during election periods, and NATO controlled military police are constantly stationed there.
+    		</p>
+
+    		<p>Last year groups of teenagers from both sides were implicated in a <a href="http://www.b92.net/eng/news/crimes.php?yyyy=2015&mm=04&dd=13&nav_id=93776" target="_blank">series of incidents </a>around the bridge involving disappearances and attempted murder. Officials tried to play it down as a “series of unfortunate events” that had “upset people”.</p>
+
+          <div class="uk-width-small-1-1 uk-hidden-medium uk-hidden-large">
+          <hr />
+          <img src='img/mitrovicabridge.png' width="100%" class='uk-margin-top'>
+          <figcaption class="figcaption uk-hidden-medium uk-hidden-large">People cross into the south over Mitrovica's main bridge
+          </figcaption>
+          <hr />
+          </div>
+
+    		<p>In the end, Seselj didn't show up at the rally, addressing it by phone instead. The police locked down the northern side of Mitrovica, he claimed, because of fears he would turn up.</p>
+
+    		<p>At the protest, the SRS spoke out against Serbian Prime Minister Aleksander Vucic and President, Tomislav Nikolic. Both are ex-members of the party and former allies of Seselj. Once he was indicted for war crimes they jumped ship and formed the Serbian Progressive Party [SNS] and now they lead Serbia’s government in Belgrade. </p>
+
+    		<p>“In the name of government of Republic of Serbia he [President of Serbia, Tomislav Nikolic] guaranteed that you will live better, that by setting barricades [against Kosovo] you will get a better life and since then what happened? He lost the battle with Kosovo. He played his dirty game and lost it,” an SRS agitator boomed from the stage. </p>
+
+
+	 </li>
+
+    <li class="uk-hidden-small uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin>  
+        <div data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1; padding-bottom: 10px;">
+           <img src='img/mitrovicabridge.png' width="100%" class='uk-margin-top'>
+                <figcaption class="figcaption">People cross into the south over Mitrovica's main bridge</figcaption>
+                <hr />
+        </div> 
+    </li>
+
+    <li class="uk-width-small-1-1 uk-width-medium-2-3 uk-width-large-2-3 uk-container-center" data-uk-grid-margin> 
+        <div style="padding-top: 10px; padding-bottom: 10px;"> 
+            <hr />                
+            <video class="" style="" controls poster="img/serbiarally.jpg"> <source src="vid/serbiarally.mp4" type="video/mp4"> <source src="video-background.webm" type="video/webm"> 
+            </video> 
+            <figcaption class="figcaption">The SRS speaking at the rally, April 12, 2016</figcaption>
+          <hr />  
+        </div>     
+    </li>      
+
+    <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">  
+
+      <p><b>The Radical Party</b> say Vucic and Nikolic have abandoned Kosovo’s Serbs in their hopes of joining the EU. In order for Serbia’s accession to be considered, its relations with Kosovo must be normalised, which means accepting its sovereignty and dismantling the parallel government that has been established in the Serbian areas of northern Kosovo.   </p>
+
+      <p>For Mitrovica’s Serb nationalists this is the final straw. On one hand sits the perception of Kosovo as part of the Greater Serbia and on the other, fears of being left behind as Belgrade chases the carrot of European Union membership. </p>
+
+      <p>Seselj and the Radical Party play on this dichotomy. Whilst the SDS has collapsed within Serbia - losing all its seats in 2012 - it still retains influence in the autonomous assembly set up to represent Serbs in Kosovo who refuse to recognise its independence. The Putin banners flying in the north side of town are an indication of where the Serb nationalists think their homeland's loyalties should lie. </p>
+
+      <p>“I think their ideology is stupid,” said Milos Timotijevic, a 27-year-old Kosovo Serb, who works for a local NGO. He says parties like the SDS are getting weaker all the time. “It is rhetoric from the 1990s and not for the 21st century, but they live on voters who don't have their own jobs or money.” <p>
+
+      <p style="padding-bottom: 30px;">On the south side of the river, optimism has faded after the initial euphoria of the independent Kosovo; it was not a panacea for the area's social and economic problems. The north of the city has many of the same problems, which breeds anger and resentment. Lingering ill-feeling means that for some Serbs there is only one philosophy: <i>Kosovo je Srbija</i>.</p>
+
+	</li>
+
+    <li class="uk-hidden-small uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin> 
+            <div data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1; padding-bottom: 10px;">
+                <img src='img/serbianflag.jpg' width="100%" class='uk-margin-top'>
+                <figcaption class="figcaption">A Serbian flag flies on the north side of Mitrovica</figcaption>
+                <hr />
+            </div> 
+    </li>
+  </ul>
+</div>  
+
+<!-- PARALLAX PICTURE -->     
+
+<div class="parallax-window uk-hidden-touch" data-parallax="scroll" data-image-src='img/trepcaworkers.jpg' >  
+</div>     
+<figcaption class="figcaption uk-hidden-touch" style="text-align: right">Workers sit in the sun at Trepca South, April 12 2016
+</figcaption>  
+
+<div class="uk-hidden-notouch"> 
+<img src='img/trepcaworkers.jpg'>
+<figcaption class="figcaption" style="text-align: right">Workers sit in the sun at Trepca South, April 12 2016</figcaption>
+</div>
+
+<!--SECTION 2 --> 
+
+<div id="Section2" class="section1small">
+  <h3>Chapter 2:  <hr/></h3> 
+  <h3>The tussle for Trepča</h3>        
+</div> 
+
+<div class="uk-container uk-container-center uk-margin-top">    
+    <ul class="uk-grid" data-uk-grid-margin>
+      <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+        <p><b>Nationalism on both sides of the river</b>, and wounds still smarting from the war, have kept the city divided. The decaying sites of Trepca are inexorably linked to this, because both sides lay claim to the potentially lucrative mines.</p>
+
+        <p>“In the eyes of Kosovo Serbs and the management of Trepca North, the mines belonged to the Serbian government, who would have to sanction any investment or public-private partnership,” said Ian Cliff, British ambassador to Kosovo between 2011 and 2015. </p>
+
+        <p>“The Kosovo Albanians, Kosovo government and the management of Trepca South viewed the mines as an asset on the territory of Kosovo that therefore belonged to Kosovo.” </p>
+
+      </li>
+
+        <li class="uk-hidden-small uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin>  
+            <div style="z-index: 1; padding-bottom: 10px;">
+                <img src='img/sunny_pathway.jpg' width="100%" class='uk-margin-top'>
+                <figcaption class="figcaption">An abandoned pathway at Trepca South</figcaption>
+                <hr />
+
+            </div> 
+        </li>
+
+        <li class="uk-width-small-1-1 uk-width-medium-2-3 uk-width-large-2-3 uk-hidden-touch uk-container-center" data-uk-grid-margin> 
+            <div style="padding-bottom: 30px;"> 
+                <hr />                
+                <a href="img/mitrovicamap.jpg" data-uk-lightbox title=""><img src='img/mitrovicamap.jpg' width="100%" class='uk-margin-top'></a>
+                <figcaption class="figcaption">A map of Mitrovica, with surrounding area inset [click to enlarge]</figcaption>
+                <hr />
+           </div>     
+        </li>
+    </ul>  
+</div> 
+
+<div class="uk-hidden-notouch">
+     <hr />                
+     <a href="img/mitrovicamap.jpg" data-uk-lightbox title=""><img src='img/mitrovicamap.jpg' width="100%" class='uk-margin-top'></a>
+     <figcaption class="figcaption">A map of Mitrovica, with surrounding area inset</figcaption>
+     <hr />
+</div>
+
+<div class="uk-container uk-container-center uk-margin-top">    
+    <ul class="uk-grid" data-uk-grid-margin>
+      <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2" style="padding-top: 10px;">
+
+       <p><b>The mines</b> have <a href="http://foreignpolicy.com/2015/02/04/set-the-trojan-horse-on-fire-kosovo-serbia-protests-mining/" target="_blank">sentimental significance</a> to Albanians because they are bound up with Kosovo’s fight for independence. As Milosevic took power in Yugoslavia in 1989, Trepca fell under Serbian control. </p>
+
+       <p>“Every day we had to face struggles,” said Avdi Uka, who worked at Trepca for 27 years, until he was fired in 1989. “Getting put in jail for no reason, nationalistic rallies for Serbs and physical as well as psychological violence.” </p>
+
+       <p>In February 1989, Trepca’s Albanian miners went on strike to protest worsening conditions, and Avdi was one of the organisers. Although Kosovo would not fight for independence until 10 years later, it was one of the first signs of unrest as Yugoslavia began to unravel.</p>
+
+       <p>“We went down into the mine for eight days and eight nights and stayed there as a protest. On the second of March they arrested me and I was in jail for 14 months for organising the strike,” he said. </p>
+
+      <div class="uk-hidden-medium uk-hidden-large">
+      <hr /> 
+      <img src='img/avdi.jpg' width="100%" class='uk-margin-top'>
+      <figcaption class="figcaption uk-hidden-medium uk-hidden-large">Avdi Uka, one of the organisers of the 1989 miners' strike</figcaption>
+      <hr />
+      </div>
+
+       <p>Around 1200 people were put on trial and punished. In August 1990 all Albanians were kicked out of Trepca as part of Milosevic’s regime. They would not return until after the Kosovo War, by which time ten years of conflict and neglect meant Stari Trg, Trepca’s biggest mine, had fallen into ruination.</p>
+
+       <p>“The conditions we found right after we came back after the war were terrible,” said Bilil Nezir, who used to be a miner, but now works in the kitchens at Trepca. “Thank God we arrived just in time after the war. We saved the mine from complete demolition.” </p>
+
+    </li>
+
+    <li class="uk-hidden-touch uk-hidden-small uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin>  
+            <div data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1; padding-bottom: 10px;">
+                <img src='img/avdi.jpg' width="100%" class='uk-margin-top uk-margin-bottom'>
+                <figcaption class="figcaption">Avdi Uka, one of the organisers of the 1989 miners strike</figcaption>
+                <hr />
+            </div> 
+    </li>
+
+    <li class="uk-width-small-1-1 uk-width-medium-2-3 uk-width-large-2-3 uk-container-center" data-uk-grid-margin> 
+        <div style="padding-top: 10px; padding-bottom: 10px;"> 
+          <hr />                
+            <video class="" style="" controls poster="img/enver.jpg"> <source src="vid/trepcavid.mp4" type="video/mp4"> <source src="video-background.webm" type="video/webm"> 
+            </video> 
+            <figcaption class="figcaption">Trepca worker Enver Tahiri on his life in the mine</figcaption>
+          <hr />  
+        </div>     
+    </li>  
+
+    <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+       <p><b>The main mine,</b> Stari Trg, was flooded during the war. Floatation devices - where ore is separated from the valueless rock attached to it - failed. After the conflict, the Kosovo Force [KFOR] peacekeepers split the opposing sides; the northern sites fell under Serbian control and the Albanians took control of the south. Recognising the potential value of Trepca, KFOR instructed the Albanians to repair the flooded mine. An impasse between the sides has remained since. </p>
+
+       <p>Some miners still work around Mitrovica, but operations are small-scale. The majority of the 40 mines that make up the Trepca complex sit in Albanian territory, but a couple are on the Serbian side. Most crucially, so is the main processing plant at Zvecan. </p>
+
+      <div class="uk-hidden-medium uk-hidden-large">
+      <hr /> 
+      <img src='img/sunny_pathway.jpg' width="100%" class='uk-margin-top'>
+      <figcaption class="figcaption uk-hidden-medium uk-hidden-large">An abandoned pathway at Trepca South</figcaption>
+      <hr />
+      </div>
+
+        <p>“We currently have 750 people who work in the mine,” said Bilil. “Unfortunately the way we work now is not even half the job we used to do because the factory where the minerals got separated is up in the north and it’s not under our management.” </p>
+
+        <p>Kosovo's Independent Commission for Mines and Minerals has said the <a href="http://uk.reuters.com/article/us-kosovo-mines-idUKTRE4B803620081209" target="_blank">value of Trepca's deposits</a> could be as much as 10 billion euros, but without cooperation from from Zvecan in the north, which melts down the zinc and lead ore into a marketable product, the mine can only operate at a fraction of its potential. </p>
+
+        <p>Zvecan officially closed in August 2000. The UN shut down it down after the war, with the assistance of NATO troops, citing its environmental and health risk. Lead levels in the air were believed to be 125 times higher than European Union standards.</p>
+
+      </li>  
+
+      <li class="uk-hidden-touch uk-hidden-small uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin>  
+        <div data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1;">
+          <aside class="pquote">
+           <hr />
+            “Thank God we arrived just in time after the war. We saved the mine from complete demolition.”
+           <hr />
+          </aside>  
+
+        </div> 
+      </li>
+
+      <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+        <p>There are plans to modernise the plant, which would reduce its environmental impact. Costs would be offset by the huge mineral wealth of the mines, but with Trepca’s ownership still unresolved this is impossible.</p>
+
+        <p>Last year, in an effort to take control of the mines, the Kosovo government announced it would attempt to <a href="http://foreignpolicy.com/2015/02/04/set-the-trojan-horse-on-fire-kosovo-serbia-protests-mining/" target="_blank">nationalise Trepca</a>, later putting the plans on hold because of Serbia’s claim to the complex. There were Echoes of 1989 as riots in Pristina ensued and Trepca’s remaining miners went on strike again. </p>
+
+        <p>Serbian prime minister Alexander Vucic responded indignantly to Kosovo’s plans during a recent visit to Leposavic, in the Mitrovica district, claiming his government would never allow Trepca to fall into Pristina’s hands. </p>
+
+        <p>“What we… fear is an attempt [by the Pristina authorities] in the future to approve a specific law with which to transform Trepca into the public property of the so-called Republic of Kosovo,” Vucic told a rally in Leposavic on 4 April, as reported by <a href="http://www.balkaninsight.com/en/article/vucic-serbia-will-fight-over-trepca-04-04-2016" target="_blank"> BalkanInsight.com</a>.“Without a doubt, we will stand up to [this] and fight it politically.” </p>
+
+        <div class="uk-small-1-1 uk-hidden-medium uk-hidden-large">
+        <hr />
+        <img src='img/red_pool2.jpg' width="100%" class='uk-margin-top'>
+        <figcaption class="figcaption">A flooded section of Trepca South, stained red from pollution in the ground</figcaption>
+        <hr />
+        </div> 
+
+        <p>Kosovo's nationalisation of Trepca failed, but privatisation of the mine has not succeeded either. Ian Cliff says that during his time as ambassador to Kosovo, the perception on one hand of past Serbian investment in Trepca and on the other of the role of the Trepca miners in striking against the Milosevic regime meant that nationalist feelings on both sides were bound up with Trepca.</p>
+
+        <p>“This made it difficult for Governments and investors to take rational business decisions about the future of the complex,” he said. 
+
+        <p>The mines once provided 70 per cent of Kosovo's GDP, but the prospect of it reaching that level again is unlikely whilst both sides are entrenched. Cliff thinks that the mines could be viable, but it would require substantial investment, and a partnership with an international metals group. </p>
+
+        <p style="padding-bottom: 5%;">“It would make a limited number of skilled jobs secure, while almost certainly requiring an early retirement scheme for some existing employees,” he said. “In the long term this would benefit Kosovo Albanians and Kosovo Serbs in Mitrovica and northern Kosovo.” </p>       
+
+      </li>
+
+      <li class="uk-hidden-touch uk-hidden-small uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin>  
+            <div data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1; padding-bottom: 10px;">
+                <img src='img/red_pool2.jpg' width="100%" class='uk-margin-top'>
+                <figcaption class="figcaption">A flooded section of Trepca South, stained red from pollution in the ground</figcaption>
+                <hr />
+            </div> 
+      </li>
+    </ul>  
+
+<!--TIMELINE -->
+</div>
+<!-- NOTOUCH -->
+<div class="uk-slidenav-position" data-uk-slideshow="" data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
+    <ul class="uk-slideshow uk-overlay-active" style="">
+        <li style="">
+            <div class="uk-cover-background uk-position-cover" style="background-image: url(img/train_tracks1.jpg);">              
+            </div>
+            <canvas class="uk-vertical-align" width="1600" height="900" style="width: auto; height: auto; opacity: 0;"></canvas>
+            <div class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-vertical-align-center">
+              <div class="uk-hidden-touch" style="padding-top: 20%;">
+                    <center><h2>Trepca<hr /></h2>
+                    <h2>Timeline</h2></center>
+                </div>
+                <div class="uk-hidden-notouch" style="padding-top: 5%;">
+                    <center><h2>Trepca<hr /></h2>
+                    <h2>Timeline</h2>
+                    <h5>[Swipe right to view]</h5></center>
+                </div>      
+            </div>
+        </li>
+        <li style="">
+            <div class="uk-cover-background uk-position-cover" style=" background-image: url(img/train_tracks1.jpg);">              
+            </div>
+            <canvas width="" height="" style="width: 100%; height: auto; opacity: 0;"></canvas>
+            <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-slide-top">
+              <div class="uk-hidden-touch" style="padding-left: 12%; padding-right: 12%">
+                    <center><h2>1925-1930<hr /></h2>
+                    <h4>In 1925, a British company, Selection Trust, assessed the potential of the mines and opened the <i>Stari Trg</i> mine in 1930</h4></center>
+                </div>  
+                <div class="uk-hidden-notouch" style="padding-left: 5%; padding-right: 5%">
+                    <center><h4>1925-1930</h4>
+                    <h5>In 1925, a British company, Selection Trust, assessed the potential of the mines and opened the <i>Stari Trg</i> mine in 1930</h5></center>
+                </div>    
+            </div>
+        </li>
+        <li style="">
+            <div class="uk-cover-background uk-position-cover" style=" background-image: url(img/bent_lamppost1.jpg);">              
+            </div>
+            <canvas width="" height="" style="width: 100%; height: auto; opacity: 0;"></canvas>
+            <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-slide-top">
+                <div class="uk-hidden-touch" style="padding-left: 12%; padding-right: 12%">
+                    <center><h2>1941-1945<hr /></h2>
+                    <h4>During the German occupation of Yugoslavia in World War II, Stari Trg supplied 40 per cent of the lead used in the Nazi war industry. The mine was mostly operated using slave labour as many of the miners were Yugoslavian resistance fighters</h4></center>
+                </div>
+                <div class="uk-hidden-notouch" style="padding-left: 5%; padding-right: 5%">
+                    <center><h4>1941-1945</h4>
+                    <h5>During the German occupation of Yugoslavia in World War II, Stari Trg supplied 40 per cent of the lead used in the Nazi war industry. </h5></center>
+                </div>     
+            </div> 
+        </li>
+        <li style="">
+            <div class="uk-cover-background uk-position-cover" style=" background-image: url(img/smashed_car1.jpg);">
+            </div>
+            <canvas width="" height="" style="width: 100%; height: auto; opacity: 0;"></canvas>
+            <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-slide-top">
+                <div class="uk-hidden-touch" style="padding-left: 12%; padding-right: 12%">
+                    <center><h2>1945-1989<hr /></h2>
+                    <h4>After the war, the mine was nationalised by the socialist Yugoslavian government and it became one of the biggest companies in the Balkans</h4></center>
+                </div>  
+                <div class="uk-hidden-notouch" style="padding-left: 5%; padding-right: 5%">
+                    <center><h4>1945-1989</h4>
+                    <h5>After the war, the mine was nationalised by the socialist Yugoslavian government and it became one of the biggest companies in the Balkans</h5></center>
+                </div>  
+            </div>    
+        </li>
+        <li style="">
+            <div class="uk-cover-background uk-position-cover" style=" background-image: url(img/blossom_and_barrels1.jpg);">
+            </div>
+            <canvas width="" height="" style="width: 100%; height: auto; opacity: 0;"></canvas>
+            <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-slide-top">
+                <div class="uk-hidden-touch" style="padding-left: 12%; padding-right: 12%">
+                    <center><h2>1989-1998<hr /></h2>
+                    <h4>Milosevic rose to power in Yugoslavia in 1989 and revoked Kosovo's autonomy. Trepca's Albanian miners went on strike. Production was heavily reduced throughout the 1990s </h4></center>
+                </div> 
+                <div class="uk-hidden-notouch" style="padding-left: 5%; padding-right: 5%">
+                    <center><h4>1989-1998</h4>
+                    <h5>Milosevic rose to power in Yugoslavia in 1989. Trepca's Albanian miners went on strike. Production was heavily reduced throughout the 1990s </h5></center>
+                </div>   
+            </div>    
+        </li>
+        <li style="">
+            <div class="uk-cover-background uk-position-cover" style=" background-image: url(img/wherehouse_sunny1.jpg);">
+            </div>
+            <canvas width="" height="" style="width: 100%; height: auto; opacity: 0;"></canvas>
+            <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-slide-top">
+                <div class="uk-hidden-touch" style="padding-left: 12%; padding-right: 12%">
+                    <center><h2>1998-2005<hr /></h2>
+                    <h4>From February 1998 until June 1999, Kosovo fought for independence against Yugoslavia (then consisting of Serbia and Montengro). Production at Trepca stopped and the mines were flooded. </h4></center>
+                </div>
+                <div class="uk-hidden-notouch" style="padding-left: 5%; padding-right: 5%">
+                    <center><h4>1998-2005</h4>
+                    <h5>In 1998 Kosovo fought for independence against Yugoslavia. Production at Trepca stopped and the mines were flooded. </h5></center>
+                </div>    
+            </div>    
+        </li>
+                <li style="">
+            <div class="uk-cover-background uk-position-cover" style=" background-image: url(img/trepcasign1.jpg);">
+            </div>
+            <canvas width="" height="" style="width: 100%; height: auto; opacity: 0;"></canvas>
+            <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-slide-top">
+                <div class="uk-hidden-touch" style="padding-left: 12%; padding-right: 12%">
+                    <center><h2>2005-Present<hr /></h2>
+                    <h4>Small-scale production started again at the mine in 2005, despite the processing plant at Zvecan being closed down. A 2015 attempt to nationalise the mines by the Kosovo government failed, and an impasse remains </h4></center>
+                </div>  
+                <div class="uk-hidden-notouch" style="padding-left: 5%; padding-right: 5%">
+                    <center><h4>2005-Present</h4>
+                    <h5>Small-scale production started again at the mine in 2005. A 2015 attempt to nationalise the mines by Kosovo failed, and an impasse remains </h5></center>
+                </div>  
+            </div>    
+        </li>
+    </ul>
+        <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous" style="color: rgba(255,255,255,0.4)"></a>
+        <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next" style="color: rgba(255,255,255,0.4)"></a>
+</div>
+<!-- SECTION 3--> 
+
+<div id="Section3" class="section1small">
+  <div class="">
+  <h3 style="">Chapter 3:  <hr/></h3> 
+  <h3 style="">Both sides of the river</h3>       
+  </div>
+</div> 
+
+<div class="uk-container uk-container-center uk-margin-top">    
+  <ul class="uk-grid" data-uk-grid-margin>
+      <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+          <p><b>Since Trepca’s closure</b>, nothing has been found to fill the void left in Mitrovica’s economy. The city’s <a href="https://citiesintransition.net/fct-cities/mitrovica/" target="_blank">official unemployment figure</a> is 65 per cent, compared to 30 per cent nationally. In a country that is officially Europe's youngest - half the population is under 25 - the impact is plain to see. On the weekday I visited, the city was full of young people crowded into cafe terraces, drinking 50 cent coffee and smoking the day away.</p>
+
+          <p class="uk-hidden-touch" style="padding-bottom: 30px;">“In general it’s hard to live without working, but especially here,” said Samir Begu, a 37-year-old Kosovo Albanian who I met at the aptly named Miner’s Pub, in the centre of Mitrovica. “Unemployment is very high. They [the government] force you into getting involved with crime. There are no public institution jobs, you can’t get such a job. And working for private companies, for 90 cents an hour, you have to work 11 hours a day.”</p>
+
+          <p class="uk-hidden-notouch" style="padding-bottom: 10px;">“In general it’s hard to live without working, but especially here,” said Samir Begu, a 37-year-old Kosovo Albanian who I met at the aptly named Miner’s Pub, in the centre of Mitrovica. “Unemployment is very high. They [the government] force you into getting involved with crime. There are no public institution jobs, you can’t get such a job. And working for private companies, for 90 cents an hour, you have to work 11 hours a day.”</p>
+
+    </li> 
+    <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-hidden-touch" data-uk-grid-margin>
+        <div class="uk-hidden-touch uk-hidden-small" data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1; padding-bottom: 20px;">
+          <aside class="pquote">
+           <hr />
+            &ldquo;In general it’s hard to live without working, but especially here&rdquo;
+           <hr />
+          </aside>          
+         </div> 
+    </li>
+  </ul>
+</div>
+
+<!-- PARALLAX PICTURE -->     
+<div class="parallax-window uk-hidden-touch" data-parallax="scroll" data-image-src='img/miner_grafiti.jpg'> 
+</div>     
+<figcaption class="figcaption uk-hidden-touch" style="text-align: right">Mural of a miner, south bank of the Ibar, April 13 2016
+</figcaption>  
+
+<div class="uk-hidden-notouch"> 
+<hr />
+<img src='img/miner_grafiti.jpg'>
+<figcaption class="figcaption" style="text-align: right">Mural of a miner, south bank of the Ibar, April 13 2016</figcaption>
+<hr />
+</div>
+
+<div class="uk-container uk-container-center uk-margin-top">
+  <ul class="uk-grid" data-uk-grid-margin>
+    <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+      <p><b>Samir used to be a carpenter</b>, but depressed wages made him turn to crime, such as robbing shops, dealing drugs and stealing cars. Since declaring independence, Kosovo has been unable to export anything to or via Serbia. Ironically this has brought the two sides together, as Samir has worked with people from the north to smuggle goods across the border.</p>
+
+      <p>“It’s not the only way, obviously,” he confessed. “A lot of people work 16 hours a day at an honest job and get paid ten euros.”</p>
+
+      <p>Samir’s dad worked at Trepca, as a welder on the railways. When he was growing up, his dad kept him and 10 other family members comfortably with his salary. He says Trepca’s closure meant he couldn't get an education, because his dad couldn’t afford to send him to school after he was forced to leave his job. </p>
+
+      <p>“We were the last generation growing up under the last breaths of communism in these territories,” he said. “When it was the blossoming time for the younger generation our parents got fired from their workplaces.”</p>
+
+      <p>“The damage that was done shutting it down, it wasn’t just local damage. It was considered the back garden of Yugoslavia.” </p>
+
+      <div class="uk-hidden-medium uk-hidden-large">
+      <hr /> 
+      <img src='img/samir.jpg' width="100%" class='uk-margin-top'>
+      <figcaption class="figcaption uk-hidden-medium uk-hidden-large">Ilaz and Samir in south Mitrovica</figcaption>
+      <hr />
+      </div>
+
+      <p>Serbs in Mitrovica face many of the same challenges as people in the south, but this is made worse because they are a minority in the city. Milica Radovanovic, a 22-year-old law student explains that the issue of living in a divided city is overshadowed by bigger problems such as corruption, unemployment and people trafficking. </p>
+
+      <p>“Every time I think that there are people in this world who do not have enough to eat or drink I find that there are bigger problems [than living in a divided city] - not only in the world - but also in my community.”</p> 
+
+    </li>
+
+    <li class="uk-hidden-touch uk-hidden-small uk-width-medium-1-2 uk-width-large-1-2" data-uk-grid-margin>  
+            <div data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1; padding-bottom: 10px;">
+                <img src='img/samir.jpg' width="100%" class='uk-margin-top'>
+                <figcaption class="figcaption">Ilaz and Samir in south Mitrovica</figcaption>
+                <hr />
+            </div> 
+    </li>
+    <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
+
+  	<p>She says that Serbs in Mitrovica have to live with the consequences of losing a war that she’s only just old enough to remember. Animosity between the two sides is still strong enough to keep her from travelling to the south. </p> 
+
+  	<p>“It is maybe irrational, but that fear is still present,” she said. “I went [to the south] a few times and nothing bad happened, but I still do not feel safe enough to walk freely in places where Albanians are the majority.”</p>
+
+  	<p>Division is still a part of daily life in Mitrovica, and Trepca encapsulates it. Both sides suffer the longer they stay apart. For 34-year-old Gzim Ferati, Trepca's closure, and the lack of opportunities for young people this has brought about, is compounded by government corruption.</p>
+
+    <p>“A lot of our officials are corrupt,” he said. “Twenty regional mayors are under investigation. One of them is in jail for 13 years and he’s still the mayor.”</p>
+
+    <p>Gzim has been unemployed for three years, after working as a manager in a factory. He says that compared to when Trepca was open, conditions in Mitrovica are miserable now. He and Samir agree that there is only one solution to their predicament if the situation in Mitrovica doesn't change. </p>
+
+    <p style="padding-bottom: 5%;">“I’m terrified by the future,” said Samir. “There is no hope of getting a job or building a proper life here. If I can’t find a solution my only option will be to move to Europe however I can.”</p>
+
+    </li>
+    <li class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-hidden-touch" data-uk-grid-margin>
+        <div class="uk-hidden-touch uk-hidden-small" data-uk-sticky="{top:100, media: 768, boundary: true}" style="z-index: 1; padding-bottom: 20px;">
+          <aside class="pquote">
+           <hr />
+            &ldquo;It is maybe irrational, but that fear is still present&rdquo;
+           <hr />
+          </aside>          
+         </div> 
+    </li>
+  </ul>
+</div>		
+<!--FOOTER-->
+
+<div class="footer" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:100}" style="padding: 4%;">
+  <ul class="uk-grid footer" data-uk-grid-margin>
+    <li class="uk-width-small-1-1 uk-width-medium-3-6 uk-width-large-3-6 footer" data-uk-grid-margin style="color: white;">  
+    	<h3>About</h3>
+  		<p style="text-align: left;"><small><i>I'm currently a video producer at The Times of London and freelance journalist. This piece of work was submitted as a final project for MA Digital Journalism at Goldsmiths, University of London. All pictures and video were shot on iPhone SE. All translation was by Xili Ismaili. </i></small></p>
+
+  		<p class="uk-hidden-small"><small>© 2016 Hayden Vernon <br><a style="color: white;" href="https://twitter.com/haydenvernon" target="_blank" class="uk-icon-hover uk-icon-twitter-square"></a>  	
+	 	<a style="color: white;" href="https://www.instagram.com/haydenvernon/" target="_blank" class="uk-icon-hover uk-icon-instagram"></a>
+	 	<a style="color: white;" href="https://www.facebook.com/hayden.j.vernon" target="_blank" class="uk-icon-hover uk-icon-facebook-square"></a></small></p>
+ 	</li>	
+ 	<li class="uk-width-small-1-1 uk-width-medium-2-6 uk-width-large-2-6 footer" data-uk-grid-margin style="color: white; text-align: left;">  
+ 	    <h3>Other work</h3>
+ 	    <p><small><a class="class1" href="http://www.vice.com/en_uk/read/my-time-in-turkish-prison-109" target="_blank">My Time Snorting Cocaine and Taking Beatings in a Turkish Prison (Vice.com)</a><br>
+		<a class="class1" href="http://www.vice.com/en_uk/read/should-art-be-used-to-push-up-rent-335" target="_blank">Should Art Be Used to Push London's Rents Up? (Vice.com)</a><br>
+ 	    <a class="class1" href="http://www.vice.com/en_uk/read/china-land-reclamation-ghost-cities-098" target="_blank">How China Can Literally Move Mountains to Build Ghost Towns (Vice.com)</a><br>
+ 	    <a class="class1" href="http://igor.gold.ac.uk/~hvern001/precrimepanopticon/" target="_blank">The Precrime Panopticon (Goldsmiths)</a><br>
+ 	    <a class="class1" href="https://vimeo.com/163313835" target="_blank">Dunkirk: the refugee crisis and the UK (Goldsmiths, video)</a></small></p>
+ 	</li>  
+ 	<li class="uk-width-small-1-1 uk-width-medium-1-6 uk-width-large-1-6 footer" data-uk-grid-margin style="color: white;">  
+ 	    <h3>Thanks</h3>
+ 	    <p><small>Miranda McLachlan <br>
+ 	    Andy Freeman <br>
+ 	    Xili Ismaili <br>
+ 	    Jack Davies</small></p>
+
+ 	</li>  
+
+ 	<p class="uk-visible-small uk-align-center"><small>© 2016 Hayden Vernon <br><a style="color: white;" href="https://twitter.com/haydenvernon" target="_blank" class="uk-icon-hover uk-icon-twitter-square"></a>  	
+ 	<a style="color: white;" href="https://www.instagram.com/haydenvernon/" target="_blank" class="uk-icon-hover uk-icon-instagram"></a>
+ 	<a style="color: white;" href="https://www.facebook.com/hayden.j.vernon" target="_blank" class="uk-icon-hover uk-icon-facebook-square"></a></small></p>
+ 
+  </ul>
+</div>
+
+<div id="offcanvas" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+          <li><p><a href="#Section1">Chapter 1 </a></p></li>
+          <li><a href="#Section2">2 </a></li>
+          <li><a href="#Section3">3 </a></li>
+          <li><a href="#Section4">4 </a></li>
+        </div>
+ </div> 
+
+</body>
+</html>
+
